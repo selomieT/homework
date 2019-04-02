@@ -1,0 +1,24 @@
+h3,h1{
+    color: blueviolet;
+}
+#description{
+    font-family:Verdana;
+    font-size: 16px;
+    font-weight:initial;
+    font-style: normal;
+}
+span{
+    font-style: italic;
+}
+body{
+
+    background-color: lightcyan;
+
+}
+p>img{
+    width: 169px;
+    height: 289px;
+}
+li>a{
+    color: blue;
+}
