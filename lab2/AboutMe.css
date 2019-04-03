@@ -15,10 +15,11 @@ body{
     background-color: lightcyan;
 
 }
+/*
 p>img{
     width: 169px;
     height: 289px;
-}
+}*/
 li>a{
     color: blue;
 }
