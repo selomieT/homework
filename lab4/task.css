@@ -1,0 +1,30 @@
+h3{
+    text-align: center;
+    background-color: #A4A400;
+    padding: 8px;
+}
+
+seecond{
+    border:2px;
+}
+#seco{
+    background-color: #404040;
+}
+table {
+
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+.colo{
+    background-color: black;
+    color: white;
+}
+.wid{
+    width: 400px;
+}
