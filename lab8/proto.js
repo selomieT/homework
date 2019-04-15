@@ -1,4 +1,4 @@
-//$(function(){
+
     function bannedWords(arr) {
         let filtered = arr.filter(function(value) {
             return value !== "not";
