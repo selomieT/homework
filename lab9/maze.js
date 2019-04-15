@@ -1,32 +1,38 @@
-'use strict';
+"use strict";
+$(document).ready(function(){
+    let touch = false;
 
-let win = true;
+    $(".boundary:not(.example)").mouseover( function(){
+        if(touch){
+            touch = false;
+            $(".boundary:not(.example)").addClass("youlose");
+            $("#status").text("Sorry you lost :[");
+        }
+    });
 
-$(document).ready(function() {
-    $("#maze .boundary").mouseover(changeRedColor);
-    $("#start").click(resetAll);
-    $("#maze").mouseleave(changeRedColor);
-    $("#end").mouseover(endTheGame);
+    $("#end").mouseover(function(){
+        if(touch){
+            $("#status").text("You win! :]");
+            touch = false;
+        } else if(touch){
+            $("#status").text("Sorry you lost :[");
+        }
+    });
 
+    $("#start").click(function(){
+        if(!touch){
+            touch = true;
+            $(".boundary:not(.example)").removeClass("youlose");
+            $("#status").text("Click the \"S\" to begin.");
+        }
+    });
+
+    $("#maze").mouseleave(function(){
+        if(touch){
+            touch = false;
+            $(".boundary:not(.example)").addClass("youlose");
+            $("#status").text("Sorry you lost :[");
+        }
+    });
 
 });
-
-function changeRedColor(){
-    if(!win){
-        $("#maze .boundary").addClass("youlose");
-        $("#status").text("You Lose!");
-        win = true;
-    }
-}
-function resetAll(){
-    win = false;
-    $("#maze .boundary").removeClass("youlose");
-    $("#status").text("Move through maze...");
-}
-
-function endTheGame(){
-    if(!win){
-        win = true;
-        $("#status").text("You Win! :]");
-    }
-}
