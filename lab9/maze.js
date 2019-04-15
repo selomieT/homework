@@ -1,6 +1,6 @@
 'use strict';
 
-var win = true;
+let win = true;
 
 $(document).ready(function() {
     $("#maze .boundary").mouseover(changeRedColor);
